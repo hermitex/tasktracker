@@ -64,6 +64,13 @@ class UI {
         `;
         list.appendChild(row);
     }
+
+    static deleteTask(task) {
+        if (task.classList.contains('delete')) {
+            task.parentElement.parentElement.remove();
+        }
+    }
+
     static clearFields() {
         document.querySelector('#task-name').value = '';
         document.querySelector('#task-code').value = '';
@@ -98,3 +105,6 @@ document.querySelector('#task-form').addEventListener('submit', (e) => {
     UI.clearFields()
 });
 // Remove a Book
+document.querySelector('#task-list').addEventListener('click', (e) => {
+    UI.deleteTask(e.target)
+})
