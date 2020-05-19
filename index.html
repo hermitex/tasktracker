@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bcbb5e63ec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
+    <title>My Task Tracker</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center"> <i class="fas fa-book-open text-primary"></i> My <span
+                class="text-primary">Task</span>
+            Tracker</h1>
+
+        <form id="task-form">
+            <div class="form-group">
+                <label for="task-title">Task Name</label>
+                <input type="text" name="task-title" id="task-name" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="task-code">Task Code</label>
+                <input type="text" name="task-code" id="task-code" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="date">Task Due Date</label>
+                <input type="datetime-local" id="task-due-date" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="title">Name of Writer Assigned</label>
+                <input type="text" id="task-writer" class="form-control">
+            </div>
+
+            <div class="form-group textarea">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, obcaecati?</p>
+                <textarea name="comments" class="btn-block" id="task-comment" cols="30" rows="10"
+                    placeholder="Additional Comments"></textarea>
+            </div>
+            <input type="submit" value="Add New Task" class="btn btn-primary btn-block">
+        </form>
+        <h2 class="text-primary text-center mt-5">My Tasks</h2>
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Task Code</th>
+                    <th>Task Due Date</th>
+                    <th>Writer Assigned</th>
+                    <th>Comments</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="task-list"></tbody>
+        </table>
+    </div>
+    <script src="/src/app.js"></script>
+</body>
+
+</html>
